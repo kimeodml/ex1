@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="deco.css">
+  <title>Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  <!--<script src="dropdown.js"></script>-->
+</head>
+<body>
+  <!--Navbar-->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <a class="navbar-logo" href="Navbar.html">
+        <img src="logo.png" alt="Logo" width="40" height="40">
+        Practice
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#toggleMobileMenu"
+        aria-controls="toggleMobileMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul class="navbar-nav ms-auto text-end">
+          <li>
+            <a class="nav-link disabled" href"#">Home</a>
+          </li>
+          <li>
+            <a class="nav-link disabled" href"#">About</a>
+          </li>
+          <li>
+            <a class="nav-link" href="Login.html">Log in</a>
+          </li>
+          <li>
+            <a class="nav-link" href="SignUp.html">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!--Sign form-->
+  <div class="sign_form">
+    <form>
+      <!--이메일-->
+      <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+      <!--비밀번호-->
+      <div class="form-group">
+        <label for="inputPW">PW</label>
+        <input type="pw" class="form-control" id="inputPW" placeholder="Password">
+      </div>
+      <!--비밀번호 확인-->
+      <div class="form-group">
+        <label for="inputPW2">Confirm PW</label>
+        <input type="pw" class="form-control" id="inputPW2" placeholder="Confirm Password">
+      </div>
+      <!--학번-->
+      <div class="form-group">
+        <label for="inputStudnetID">Student ID</label>
+        <input type="text" class="form-control" id="StudentID" placeholder="Student ID">
+      </div>
+      <!--전공 선택-->
+      <div class="form-group">
+        <label for="inputMajor">Major</label>
+        <div class="dropdown">
+          <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Choose your major
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Mechatronics</a></li>
+            <li><a class="dropdown-item" href="#">Computer Science & Engineering</a></li>
+            <li><a class="dropdown-item" href="#">Mechanical Engineering</a></li>
+            <li><a class="dropdown-item" href="#">Industrial Design Engineering</a></li>
+            <li><a class="dropdown-item" href="#">Chemical Engineering</a></li>
+            <li><a class="dropdown-item" href="#">Architectural Engineering</a></li>
+            <li><a class="dropdown-item" href="#">Industrial Management</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--학생 번호-->
+      <div class="form-group">
+        <label for="inputPhoneNum">Student Number</label>
+        <input type="text" class="form-control" id="inputPhoneNum" placeholder="Phone Number">
+      </div>
+      <!--체크버튼-->
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <!--제출 or 취소 버큰-->
+      <button type="reset" class="btn btn-primary" style="margin-left:5px;">Cancel</button>
+      <button type="submit" class="btn btn-primary" style="margin-right:5px;">Sign in</button>
+    </form>
+  </div>
+  <!--footer-->
+  <div class="bottom_email">
+    kimeodml@gmail.com
+  </div>
+</body>
+</html>
