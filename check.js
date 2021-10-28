@@ -107,34 +107,36 @@ function check(re,what,message){ // 유효성 겁사를 해주는 함수
 }
 
 function pressEnter(){
-  var form = document.loginForm;
-  var regEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/;
-
-  if (!form.Email.value) {
+  var regEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/; // 이메일 정규식 
+  var email = document.getElementById('Email'); // 이메일 
+  var pw = document.getElementById('Password'); // 비밀번호 
+  var checkbox = document.getElementById('Check'); // 체크박스 
+  
+  if (email.value == "") { // 빈칸일 경우  
     alert("이메일을 입력해 주십시오.");
-    form.Email.focus();
+    email.focus();
     return;
   }
-
-  if(!regEmail.test(form.Email.value)){
+  
+  if(!regEmail.test(email.value)){ // 유효성 검사 
     alert('올바른 이메일 형태가 아닙니다.');
-    form.Email.value = "";
-    form.Email.focus();
+    email.value = "";
+    email.focus();
     return;
   }
-
-  if (!form.Password.value) {
+  
+  if (pw.value == "") { // 빈칸일 경우  
     alert("비밀번호를 입력해 주십시오.");
-    form.Password.focus();
+    pw.focus();
     return;
   }
-  if (!form.Check.checked) {
+  if (!checkbox.checked) { // 체크하지 않았을 경우 
     alert("Check me out!");
-    form.Check.focus();
+    checkbox.focus();
     return;
   }
-
-  form.action = "#";
-  alert('로그인이 완료되었습니다!');
-  form.submit();
+  
+  action = "#";
+  alert('로그인이 완료되었습니다!'); // 로그인 완료 문구  
+  submit();
 }
